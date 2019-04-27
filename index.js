@@ -20,7 +20,7 @@ var SCRYPT_PARAMS = {
 var NULL = Buffer.alloc(0)
 
 function hash160 (buffer) {
-  return createHash('rmd160').update(
+  return createHash('ripemd160').update(
     createHash('sha256').update(buffer).digest()
   ).digest()
 }
